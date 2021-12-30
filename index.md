@@ -1,4 +1,4 @@
-## Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database
+# Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database
 Quentin Bammey, Tina Nikoukhah, Marina Gardella, Rafael Grompone von Gioi, Miguel Colom, Jean-Michel Morel
 
 Centre Borelli — École Normale Supérieure Paris-Saclay — Université Paris-Saclay
