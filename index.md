@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+## Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database
+Quentin Bammey, Tina Nikoukhah, Marina Gardella,\\Rafael Grompone von Gioi, Miguel Colom, Jean-Michel Morel
+Centre Borelli — École Normale Supérieure Paris-Saclay — Université Paris-Saclay
 
-You can use the [editor on GitHub](https://github.com/qbammey/trace/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Abstract
+We propose a new method to evaluate image forensics tools, that characterizes what image cues are being used by each detector. Our method enables effortless creation of an arbitrarily large dataset of carefully tampered images in which controlled detection cues are present. Starting with raw images, we alter aspects of the image formation pipeline inside a mask, while leaving the rest of the image intact. This does not change the image's interpretation; we thus call such alterations non-semantic, as they yield no semantic inconsistencies.
+This method avoids the painful and often biased creation of convincing semantics.
+All aspects of image formation (noise, CFA, compression pattern and quality, etc.\@) can vary independently in both the authentic and tampered parts of the image.
+Alteration of a specific cue enables precise evaluation of the many forgery detectors that rely on this cue, and of the sensitivity of more generic forensic tools to each specific trace of forgery, and can be used to guide the combination of different methods.
+Based on this methodology, we create a database and conduct an evaluation of the main state-of-the-art image forensics tools, where we characterize the performance of each method with respect to each detection cue.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Database
+The dataset can be accessed [here](dev.ipol.im/~qbammey/trace.tar.gz).
 
-### Markdown
+## Code
+The code and instructions to create new forgeries from forged images are available on the [github repository](https://github.com/qbammey/trace).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## License
+The Trace forgery images database is derived from authentic images of the [RAISE dataset](http://loki.disi.unitn.it/RAISE).
+Following policy of the RAISE dataset, it is thus to be used only for non-commercial research and educational purposes.
 
-```markdown
-Syntax highlighted code block
+If using the dataset in any published work, please cite both the Trace article (full citation to come once the article is published):
+Q. Bammey, T. Nikoukhah, M. Gardella, R. Grompone von Gioi, M. Colom, J.-M. Morel, Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database, Winter Conference on Applications of Computer Vision, Waikoloa, Hawaii, 2022
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+and the RAISE dataset article from where the images are derived:
+.-T. Dang-Nguyen, C. Pasquini, V. Conotter, G. Boato, RAISE – A Raw Images Dataset for Digital Image Forensics, ACM Multimedia Systems, Portland, Oregon, March 18-20, 2015
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/qbammey/trace/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+@inproceedings{dang2015raise,
+  title={Raise: A raw images dataset for digital image forensics},
+  author={Dang-Nguyen, Duc-Tien and Pasquini, Cecilia and Conotter, Valentina and Boato, Giulia},
+  booktitle={Proceedings of the 6th ACM multimedia systems conference},
+  pages={219--224},
+  year={2015}
+}
+```
