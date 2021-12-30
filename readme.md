@@ -1,21 +1,21 @@
 ## Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database
-Quentin Bammey, Tina Nikoukhah, Marina Gardella,\\Rafael Grompone von Gioi, Miguel Colom, Jean-Michel Morel
+Quentin Bammey, Tina Nikoukhah, Marina Gardella, Rafael Grompone von Gioi, Miguel Colom, Jean-Michel Morel
 Centre Borelli — École Normale Supérieure Paris-Saclay — Université Paris-Saclay
 
-## Abstract
+## Abstract
 We propose a new method to evaluate image forensics tools, that characterizes what image cues are being used by each detector. Our method enables effortless creation of an arbitrarily large dataset of carefully tampered images in which controlled detection cues are present. Starting with raw images, we alter aspects of the image formation pipeline inside a mask, while leaving the rest of the image intact. This does not change the image's interpretation; we thus call such alterations non-semantic, as they yield no semantic inconsistencies.
 This method avoids the painful and often biased creation of convincing semantics.
 All aspects of image formation (noise, CFA, compression pattern and quality, etc.\@) can vary independently in both the authentic and tampered parts of the image.
 Alteration of a specific cue enables precise evaluation of the many forgery detectors that rely on this cue, and of the sensitivity of more generic forensic tools to each specific trace of forgery, and can be used to guide the combination of different methods.
 Based on this methodology, we create a database and conduct an evaluation of the main state-of-the-art image forensics tools, where we characterize the performance of each method with respect to each detection cue.
 
-## Database
+## Database
 The dataset can be accessed [here](dev.ipol.im/~qbammey/trace.tar.gz).
 
-## Code
+## Code
 The provided code can create new forgeries in the same way that they were created in the article. `generate_database.sh` will run all the scripts in order.
 
-### Structure
+### Structure
 To run the provided code, original images should be placed in the `images/` directory. Each image should be in its own subdirectory under the name `original.NEF`. For instance, an image could be placed at `images/foo/original.NEF`.
 
 1. `make_gt_global.py`, `make_gt_noise.py`, `make_gt_cfa.py`, `make_gt_jpeg.py`, `make_gt_hybrid.py` will generate parameters for both processing pipelines in the different datasets.
@@ -24,7 +24,7 @@ To run the provided code, original images should be placed in the `images/` dire
 4. Finally, `merge_images.py` will use the generated images and forgery masks to merge two images into one forgery.
 
 
-## License
+## License
 The Trace forgery images database is derived from authentic images of the [RAISE dataset](http://loki.disi.unitn.it/RAISE).
 Following policy of the RAISE dataset, it is thus to be used only for non-commercial research and educational purposes.
 
