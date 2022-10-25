@@ -28,8 +28,17 @@ To run the provided code, original images should be placed in the `images/` dire
 The Trace forgery images database is derived from authentic images of the [RAISE dataset](http://loki.disi.unitn.it/RAISE).
 Following policy of the RAISE dataset, it is thus to be used only for non-commercial research and educational purposes.
 
-If using the dataset in any published work, please cite both the Trace article (full citation to come once the article is published):
+If using the dataset in any published work, please cite both the Trace article :
 Q. Bammey, T. Nikoukhah, M. Gardella, R. Grompone von Gioi, M. Colom, J.-M. Morel, Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database, Winter Conference on Applications of Computer Vision, Waikoloa, Hawaii, 2022
+```
+@INPROCEEDINGS{bammey2022trace,
+  author={Bammey, Quentin and Nikoukhah, Tina and Gardella, Marina and von Gioi, Rafael Grompone and Colom, Miguel and Morel, Jean-Michel},
+  booktitle={2022 IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  title={Non-Semantic Evaluation of Image Forensics Tools: Methodology and Database},
+  year={2022},
+  pages={2383-2392},
+  doi={10.1109/WACV51458.2022.00244}}
+```
 
 and the RAISE dataset article from where the images are derived:
 .-T. Dang-Nguyen, C. Pasquini, V. Conotter, G. Boato, RAISE – A Raw Images Dataset for Digital Image Forensics, ACM Multimedia Systems, Portland, Oregon, March 18-20, 2015
